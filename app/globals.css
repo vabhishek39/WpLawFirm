@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-primary: #eab308; /* yellow-500 */
+  --color-primary-dark: #ca8a04; /* yellow-600 */
+  --color-primary-light: #fef08a; /* yellow-200 */
+  
+  --color-background: #0a0a0a;
+  --color-surface: #171717;
+  --color-surface-light: #262626;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600;
+  }
+  
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600;
+  }
+}
